@@ -6,6 +6,6 @@ const DB = process.env.MONGODB_SERVER.replace('<password>', process.env.DB_PASSW
 mongoose.connect(DB,{ useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected to Mongodb Successfully!!"))
     .catch((err) => console.log(err));
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT||4000, () => {
     console.log(`app is listening on port ${process.env.PORT}...`)
 })
