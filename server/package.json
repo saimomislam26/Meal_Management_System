@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "start-server": "node app.js",
-    "build":"npm i"
+    "build": "npm i"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "mongoose": "^6.2.1",
-    "mongoose-autopopulate": "^1.0.0"
+    "mongoose-autopopulate": "^1.0.0",
+    "nodemon": "^2.0.21"
   }
 }
