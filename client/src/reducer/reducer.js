@@ -10,7 +10,7 @@ export const reducer = (state, action) => {
         case 'DELETE_USER_INFO':
             state.userName = ""
             state.isLoggedIn = false
-            Cookies.remove('jwtoken')
+            Cookies.remove('jwtoken',{ path: '/', domain: 'main--visionary-pastelito-6bff9d.netlify.app' })
             return { ...state }
         default:
             return { ...state }
