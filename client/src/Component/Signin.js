@@ -34,6 +34,7 @@ const Signin = () => {
             credentials:'include'
         })
         const data = await res.json()
+        console.log(data);
         if (res.status === 400) {
             toast(data.message, {
                 position: "top-center",
@@ -47,6 +48,7 @@ const Signin = () => {
                 });
         }
         else {
+            localStorage.setItem('jwtoken',data.token)
             setUserInfo(data)
             // localStorage.setItem("userData",JSON.stringify(data))
             toast('Enjoy Your Meal', {

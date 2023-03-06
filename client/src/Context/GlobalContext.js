@@ -10,7 +10,7 @@ let initialState = {
     _id:""
 }
 
-const jwt = Cookies.get("jwtoken")
+const jwt = localStorage.getItem("jwtoken")
 
 const GlobalContext = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -34,7 +34,7 @@ const GlobalContext = () => {
         }
     }
     useEffect(() => {
-        if(Cookies.get("jwtoken")){
+        if(localStorage.getItem("jwtoken")){
             getUserData()
         }
         else{

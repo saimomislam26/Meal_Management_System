@@ -21,7 +21,7 @@ const AddItem = () => {
         amount: "",
         date: ""
     })
-    const jwt = Cookies.get('jwtoken')
+    const jwt = localStorage.getItem('jwtoken')
     let name, value
     const getBazarInfo = (e) => {
         name = e.target.id

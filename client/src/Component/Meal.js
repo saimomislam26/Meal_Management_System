@@ -13,7 +13,7 @@ const Meal = () => {
       amount:"",
       date:""
     });
-    const jwt = Cookies.get('jwtoken')
+    const jwt = localStorage.getItem('jwtoken')
     let name,value
     const handleMeal =(e)=>{
       name = e.target.id

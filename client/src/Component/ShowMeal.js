@@ -11,7 +11,7 @@ import Box from '@mui/material/Box';
 import Cookies from 'js-cookie'
 
 const ShowMeal = () => {
-    const jwt = Cookies.get('jwtoken')
+    const jwt =localStorage.getItem('jwtoken')
     const [info, setInfo] = useState({
         totalBazar: 0,
         totalMeal: 0,

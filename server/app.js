@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
     // http://localhost:3000 https://main--visionary-pastelito-6bff9d.netlify.app
-    res.setHeader('Access-Control-Allow-Origin', 'https://main--visionary-pastelito-6bff9d.netlify.app');
+    res.setHeader('Access-Control-Allow-Origin', 'https://main--visionary-pastelito-6bff9d.netlify.app,http://localhost:3000');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
