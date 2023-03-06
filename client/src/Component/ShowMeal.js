@@ -28,13 +28,13 @@ const ShowMeal = () => {
             }
         })
         const temp = await res.json()
-
+        console.log(temp);
         if (res.status === 200) {
             setInfo({
                 totalBazar: temp[1].totalBazar,
                 totalMeal: temp[0].total,
-                pMeal: temp[2].result.filter((val)=>{return(val.name[0].name==='Pranto' && val.amount)})[0].amount,
-                sMeal: temp[2].result.filter((val)=>{return(val.name[0].name==='Saimom' && val.amount)})[0].amount,
+                pMeal: temp[2].result.filter((val)=>{return(val.name[0].name==='Pranto' && val?.amount)})[0]?.amount || 0,
+                sMeal: temp[2].result.filter((val)=>{return(val.name[0].name==='Saimom' && val?.amount)})[0]?.amount || 0 ,
             })
         }
     }
