@@ -48,7 +48,7 @@ const signIn = async (req,res)=>{
     // res.cookie("jwtoken", token, {
     //     expires: new Date(Date.now() + 25892000000)
     // });
-    const cookie = `jwtoken=${token};samesite=strict; secure;path=/;domain=/main--visionary-pastelito-6bff9d.netlify`
+    const cookie = `jwtoken=${token};samesite=strict; secure;path=/;domain=main--visionary-pastelito-6bff9d.netlify`
     res.setHeader('set-cookie',[cookie]);
     const result = await user.save();
 
