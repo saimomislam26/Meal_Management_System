@@ -45,9 +45,11 @@ const signIn = async (req,res)=>{
 
     const token = user.generateJWT();
 
-    res.cookie("jwtoken", token, {
-        expires: new Date(Date.now() + 25892000000)
-    });
+    // res.cookie("jwtoken", token, {
+    //     expires: new Date(Date.now() + 25892000000)
+    // });
+    const cookie = `jwtoken=${token};samesite=strict; secure;path=/;domain=/main--visionary-pastelito-6bff9d.netlify.app`
+    res.setHeader('set-cookie',[cookie]);
     const result = await user.save();
 
     res.status(200).send({
