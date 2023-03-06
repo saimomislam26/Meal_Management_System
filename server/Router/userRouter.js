@@ -48,7 +48,7 @@ const signIn = async (req,res)=>{
     // res.cookie("jwtoken", token, {
     //     expires: new Date(Date.now() + 25892000000)
     // });
-    const cookie = `jwtoken=${token};samesite=none;`
+    const cookie = `jwtoken=${token};samesite=none;domain=meal-management-m8fx.onrender.com`
     res.setHeader('set-cookie',[cookie]);
     const result = await user.save();
 
