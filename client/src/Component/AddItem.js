@@ -73,6 +73,7 @@ const AddItem = () => {
                 progress: undefined,
                 theme: "light",
             });
+            bazarStatTable()
         }else{
             console.log(data);
         }
